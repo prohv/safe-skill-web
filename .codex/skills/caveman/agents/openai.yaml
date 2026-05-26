@@ -1,0 +1,7 @@
+interface:
+  display_name: "Caveman"
+  short_description: "Debug edge cases with bare-metal focus."
+  default_prompt: "Use $caveman to debug a stubborn edge case with minimal assumptions."
+
+policy:
+  allow_implicit_invocation: true

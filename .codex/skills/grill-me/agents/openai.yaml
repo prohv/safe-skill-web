@@ -1,0 +1,7 @@
+interface:
+  display_name: "Grill Me"
+  short_description: "Audit Server Components and streaming."
+  default_prompt: "Use $grill-me to audit a Next.js route for Server Component and streaming issues."
+
+policy:
+  allow_implicit_invocation: true

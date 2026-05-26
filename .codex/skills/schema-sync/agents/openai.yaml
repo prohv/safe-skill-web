@@ -1,0 +1,7 @@
+interface:
+  display_name: "Schema Sync"
+  short_description: "Align CLI payloads with Drizzle models."
+  default_prompt: "Use $schema-sync to align the CLI report payload with Drizzle schema and API contracts."
+
+policy:
+  allow_implicit_invocation: true

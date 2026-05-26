@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mock Seeder"
+  short_description: "Seed a marketplace without a database."
+  default_prompt: "Use $mock-seeder to stand up mock marketplace data without wiring a database."
+
+policy:
+  allow_implicit_invocation: true

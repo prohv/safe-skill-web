@@ -1,0 +1,7 @@
+interface:
+  display_name: "Tailwind Speedrun"
+  short_description: "Prototype lean UI fast with Tailwind."
+  default_prompt: "Use $tailwind-speedrun to prototype a minimal report or marketplace screen with Tailwind."
+
+policy:
+  allow_implicit_invocation: true
