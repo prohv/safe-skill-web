@@ -1,22 +1,9 @@
 # Project Context
 
-## Overview
-`safe-skill-web` is a web project repository that is currently being initialized.
+`safe-skill-web` is the SafeSkill web platform: a lightweight layer for report visualization, report storage, a safe-skill marketplace, and optional upload-based scanning.
 
-At the moment, the repository does not contain application source files, build configuration, or documentation beyond Git metadata. This file exists to give Codex and future contributors a stable starting point as the project takes shape.
+- Expected stack: Next.js, TypeScript, React, Drizzle, Neon Postgres, Vercel.
+- Product boundary: the Go CLI remains the source of truth for enforcement and trust decisions.
+- Default implementation bias: server-first, minimal client JS, MVP-focused scope.
 
-## Current State
-- Git repository is initialized.
-- No committed application files are present yet.
-- No package manager, framework, or runtime has been established.
-
-## Working Assumptions
-- This repository will be used for a web-focused application or site.
-- Tooling, framework, and deployment choices are still open.
-- Documentation and agent instructions should stay minimal until the first implementation lands.
-
-## Guidance For Codex
-- Keep setup lightweight until the project structure is defined.
-- Prefer adding only the files needed for the task at hand.
-- Avoid introducing framework-specific assumptions unless requested.
-- Update this document once the stack, app purpose, or architecture becomes clear.
+For full product details, architecture, flows, and priorities, refer to `PRD.md`.
