@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
 import { skills } from "@/db/schema/skills";
-import { and, or, arrayContains, lt, eq, asc } from "drizzle-orm";
+import { and, lt, eq, asc, sql } from "drizzle-orm";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -23,14 +23,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json([]);
   }
 
-  const tagConditions = tagList.map((tag) => arrayContains(skills.tags, [tag]));
-
   const rows = await db
     .select()
     .from(skills)
     .where(
       and(
-        or(...tagConditions),
+        sql`${skills.tags} && ${tagList}`,
         lt(skills.riskScore, 30),
         eq(skills.verified, true)
       )

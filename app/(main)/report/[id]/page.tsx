@@ -3,8 +3,9 @@ import { db } from "@/db";
 import { reports } from "@/db/schema/reports";
 import { eq } from "drizzle-orm";
 import { ReportHero } from "@/components/ReportHero";
-import { ReportDetails, type Signal } from "@/components/ReportDetails";
+import { ReportDetails } from "@/components/ReportDetails";
 import { ReportActions } from "@/components/ReportActions";
+import type { Signal } from "@/lib/types";
 
 export default async function ReportPage({
   params,
