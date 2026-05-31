@@ -15,12 +15,6 @@ const riskBgClass: Record<RiskStatus, string> = {
   BLOCKED: "bg-risk-blocked",
 };
 
-const riskAuraClass: Record<RiskStatus, string> = {
-  SAFE: "folder-safe",
-  WARN: "folder-warn",
-  BLOCKED: "folder-blocked",
-};
-
 const riskBadgeClass: Record<RiskStatus, string> = {
   SAFE: "bg-risk-safe/10 text-risk-safe border border-risk-safe/20",
   WARN: "bg-risk-warn/10 text-risk-warn border border-risk-warn/20",
@@ -47,11 +41,11 @@ export function SkillCard({
   verified: boolean;
 }) {
   const risk = deriveRisk(riskScore);
+  const visibleTags = tags.slice(0, 3);
+  const extraCount = tags.length - 3;
 
   return (
-    <div
-      className="skill-card skill-card-hover relative rounded-2xl bg-surface border border-white/[0.08] p-5 transition-all duration-300 hover:border-white/[0.16] hover:translate-y-[-2px]"
-    >
+    <div className="skill-card skill-card-hover h-full flex flex-col relative rounded-2xl bg-surface border border-white/[0.08] p-5 transition-all duration-300 hover:border-white/[0.16] hover:translate-y-[-2px]">
       <div className="flex items-center gap-2 mb-3">
         {verified && (
           <span className="px-2 py-0.5 rounded-full bg-brand-teal/10 text-brand-teal text-xs font-satoshi">
@@ -65,7 +59,7 @@ export function SkillCard({
         </span>
       </div>
 
-      <h2 className="font-clash text-xl text-text-primary leading-tight mb-2">
+      <h2 className="font-clash text-2xl text-text-primary leading-tight mb-2">
         {name}
       </h2>
 
@@ -75,7 +69,7 @@ export function SkillCard({
 
       {tags.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {tags.map((tag) => (
+          {visibleTags.map((tag) => (
             <span
               key={tag}
               className="px-2 py-0.5 rounded-full bg-overlay text-text-muted text-[10px] font-satoshi"
@@ -83,6 +77,11 @@ export function SkillCard({
               {tag}
             </span>
           ))}
+          {extraCount > 0 && (
+            <span className="px-2 py-0.5 rounded-full bg-overlay text-text-muted text-[10px] font-satoshi">
+              +{extraCount}
+            </span>
+          )}
         </div>
       )}
 
@@ -93,7 +92,7 @@ export function SkillCard({
         />
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mt-auto">
         <span className="font-satoshi text-xs text-text-muted">
           Risk:{" "}
           <span className={riskTextClass[risk]}>{riskScore}</span>
