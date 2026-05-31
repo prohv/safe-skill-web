@@ -1,1 +1,2 @@
-// Schema definitions — added in Phase 1
+export { reports } from "./reports";
+export { skills } from "./skills";
