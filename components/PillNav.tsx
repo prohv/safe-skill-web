@@ -8,7 +8,7 @@ const items = [
   { icon: Home, label: "Home", href: "/" },
   { icon: ShoppingBag, label: "Marketplace", href: "/marketplace" },
   { icon: FileText, label: "Reports", href: "/reports" },
-  { icon: BookOpen, label: "Docs", href: "https://docs.safeskill.dev" },
+  { icon: BookOpen, label: "Docs", href: "https://github.com/prohv/safe-skill-web#readme" },
 ] as const;
 
 export function PillNav() {
