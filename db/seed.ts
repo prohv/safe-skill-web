@@ -20,7 +20,7 @@ const seedSkills = [
     riskScore: 10,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/grill-me/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/grill-me",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "diagnose",
@@ -30,7 +30,7 @@ const seedSkills = [
     riskScore: 8,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/diagnose/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/diagnose",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "tdd",
@@ -40,7 +40,7 @@ const seedSkills = [
     riskScore: 5,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/tdd/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/tdd",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "improve-codebase-architecture",
@@ -50,7 +50,7 @@ const seedSkills = [
     riskScore: 20,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/improve-codebase-architecture/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/improve-codebase-architecture",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "zoom-out",
@@ -60,7 +60,7 @@ const seedSkills = [
     riskScore: 5,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/zoom-out/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/zoom-out",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "grill-with-docs",
@@ -70,7 +70,7 @@ const seedSkills = [
     riskScore: 10,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/grill-with-docs/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/grill-with-docs",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "prototype",
@@ -80,7 +80,7 @@ const seedSkills = [
     riskScore: 15,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/prototype/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/prototype",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "handoff",
@@ -90,7 +90,7 @@ const seedSkills = [
     riskScore: 8,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/handoff/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/handoff",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "write-a-skill",
@@ -100,7 +100,7 @@ const seedSkills = [
     riskScore: 25,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/write-a-skill/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/write-a-skill",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "to-prd",
@@ -110,7 +110,7 @@ const seedSkills = [
     riskScore: 5,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/to-prd/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/to-prd",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "to-issues",
@@ -120,7 +120,7 @@ const seedSkills = [
     riskScore: 10,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/to-issues/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/to-issues",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "triage",
@@ -130,7 +130,7 @@ const seedSkills = [
     riskScore: 5,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/triage/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/triage",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "git-guardrails",
@@ -140,7 +140,7 @@ const seedSkills = [
     riskScore: 30,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/git-guardrails-claude-code/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/git-guardrails-claude-code",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
   {
     id: "setup-pre-commit",
@@ -150,7 +150,7 @@ const seedSkills = [
     riskScore: 20,
     verified: true,
     installCommand: "curl -O https://raw.githubusercontent.com/mattpocock/skills/main/setup-pre-commit/SKILL.md",
-    sourceUrl: "https://github.com/mattpocock/skills/tree/main/setup-pre-commit",
+    sourceUrl: "https://github.com/mattpocock/skills",
   },
 ];
 
