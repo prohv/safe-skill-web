@@ -5,14 +5,14 @@
   --color-surface: #111118;
   --color-elevated: #16161f;
   --color-overlay: #1c1c28;
-  --color-brand-teal: #2dd4bf;
-  --color-brand-indigo: #818cf8;
-  --color-brand-violet: #a78bfa;
+  --color-brand-teal: #00BFFF;
+  --color-brand-indigo: #4169E1;
+  --color-brand-violet: #1E3A8A;
   --color-risk-safe: #34d399;
   --color-risk-warn: #fbbf24;
   --color-risk-blocked: #f87171;
-  --color-accent: #2dd4bf;
-  --color-accent-hover: #5eead4;
+  --color-accent: #4169E1;
+  --color-accent-hover: #5B8DEF;
   --color-text-primary: #f0f0f5;
   --color-text-secondary: #9090a8;
   --color-text-muted: #55556a;
@@ -26,8 +26,10 @@
 
 .bg-ambient {
   background:
-    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(167, 139, 250, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(0, 191, 255, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 85% 30%, rgba(65, 105, 225, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 40% at 50% 90%, rgba(30, 58, 138, 0.09) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 30% at 40% 15%, rgba(0, 191, 255, 0.05) 0%, transparent 50%),
     var(--color-base);
 }
 
@@ -101,6 +103,16 @@ body {
   background: var(--color-base);
   color: var(--color-text-primary);
   font-family: var(--font-satoshi);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 * {
