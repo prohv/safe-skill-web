@@ -39,14 +39,14 @@ export function SkillFolderCard({
   return (
     <div
       className={`
-        skill-card skill-card-hover relative rounded-2xl bg-surface
+        skill-card skill-card-hover h-full flex flex-col relative rounded-2xl bg-surface
         border border-white/[0.08] p-5
         transition-all duration-300
         hover:border-white/[0.16] hover:translate-y-[-2px]
         ${riskAuraClass[risk]}
       `}
     >
-      <div className="h-28 rounded-xl bg-overlay mb-4 overflow-hidden">
+      <div className="h-24 rounded-xl bg-overlay mb-4 overflow-hidden">
         <div className="w-full h-full flex items-center justify-center text-text-muted text-xs font-satoshi">
           Cover image · coming soon
         </div>
@@ -65,15 +65,15 @@ export function SkillFolderCard({
         </span>
       </div>
 
-      <h2 className="font-clash text-2xl text-text-primary leading-tight mb-2">
+      <h2 className="font-clash text-3xl text-text-primary leading-tight mb-2">
         {title}
       </h2>
 
-      <p className="font-satoshi text-sm text-text-secondary leading-relaxed mb-4">
+      <p className="font-satoshi text-sm text-text-secondary leading-relaxed mb-4 line-clamp-3">
         {description}
       </p>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mt-auto">
         <span className="font-satoshi text-sm text-text-muted">
           Risk: <span className={riskTextClass[risk]}>{riskScore}</span>
         </span>
