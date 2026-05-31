@@ -50,7 +50,7 @@ export default function ScanPage() {
 
   return (
     <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="font-clash text-2xl text-text-primary mb-6">
+      <h1 className="font-clash text-2xl text-brand-gradient mb-6">
         Quick Scan
       </h1>
 

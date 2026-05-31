@@ -40,6 +40,9 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       <MarketplaceSearchBar />
 
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <h1 className="font-clash text-2xl text-brand-gradient mb-4 pt-4">
+          Skills Marketplace
+        </h1>
         <div className="py-4">
           <TagPills tags={uniqueTags} />
         </div>

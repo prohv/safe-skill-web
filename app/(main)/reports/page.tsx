@@ -13,7 +13,7 @@ export default async function ReportsPage() {
 
   return (
     <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 pt-6 pb-20">
-      <h1 className="font-clash text-2xl text-text-primary mb-6">Reports</h1>
+      <h1 className="font-clash text-2xl text-brand-gradient mb-6">Reports</h1>
 
       {rows.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 text-center">
