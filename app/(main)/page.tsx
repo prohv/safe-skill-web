@@ -1,6 +1,6 @@
-import { FilterBar } from "@/components/FilterBar";
 import { SkillFolderCard } from "@/components/SkillFolderCard";
 import GradientText from "@/components/GradientText";
+import { ShieldCheck, Code2, Users } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -21,8 +21,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      <FilterBar />
-
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-12 gap-6 lg:gap-8">
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
@@ -33,6 +31,7 @@ export default function HomePage() {
               riskScore={5}
               verified
               href="/marketplace?sort=risk-asc"
+              coverIcon={ShieldCheck}
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
@@ -43,6 +42,7 @@ export default function HomePage() {
               riskScore={10}
               verified
               href="/marketplace?tag=dev"
+              coverIcon={Code2}
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
@@ -53,6 +53,7 @@ export default function HomePage() {
               riskScore={15}
               verified
               href="/marketplace?sort=popular"
+              coverIcon={Users}
             />
           </div>
         </div>

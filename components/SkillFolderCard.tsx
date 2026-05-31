@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 type RiskStatus = "SAFE" | "WARN" | "BLOCKED";
 
@@ -28,6 +29,7 @@ export function SkillFolderCard({
   riskScore,
   verified,
   href,
+  coverIcon,
 }: {
   title: string;
   description: string;
@@ -35,21 +37,21 @@ export function SkillFolderCard({
   riskScore: number;
   verified?: boolean;
   href: string;
+  coverIcon?: LucideIcon;
 }) {
+  const CoverIcon = coverIcon || ShieldCheck;
   return (
     <div
       className={`
-        skill-card skill-card-hover h-full flex flex-col relative rounded-2xl bg-surface
+        skill-card skill-card-hover group h-full flex flex-col relative rounded-2xl bg-surface
         border border-white/[0.08] p-5
         transition-all duration-300
         hover:border-white/[0.16] hover:translate-y-[-2px]
         ${riskAuraClass[risk]}
       `}
     >
-      <div className="h-24 rounded-xl bg-overlay mb-4 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center text-text-muted text-xs font-satoshi">
-          Cover image · coming soon
-        </div>
+      <div className="h-28 rounded-xl bg-overlay/50 mb-4 overflow-hidden flex items-center justify-center group-hover:bg-overlay transition-colors duration-300">
+        <CoverIcon className="w-16 h-16 text-text-muted/20 group-hover:text-brand-teal group-hover:drop-shadow-[0_0_8px_rgba(0,191,255,0.35)] transition-all duration-300" />
       </div>
 
       <div className="flex items-center gap-2 mb-3">
