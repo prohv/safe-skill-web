@@ -1,10 +1,10 @@
 export default function MarketplaceLoading() {
   return (
     <div className="animate-pulse">
-      <div className="flex items-center gap-3 px-6 py-3">
-        <div className="h-10 w-20 rounded-xl bg-overlay" />
+      <div className="mx-auto w-full max-w-screen-xl flex items-center justify-center gap-3 px-4 sm:px-6 lg:px-8 py-3">
+        <div className="h-10 w-20 rounded-xl bg-overlay shrink-0" />
         <div className="flex-1 h-10 rounded-xl bg-overlay" />
-        <div className="h-10 w-20 rounded-xl bg-overlay" />
+        <div className="h-10 w-20 rounded-xl bg-overlay shrink-0" />
       </div>
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex gap-2 py-4">
