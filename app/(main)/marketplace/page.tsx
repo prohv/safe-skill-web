@@ -1,8 +1,7 @@
 import { db } from "@/db";
 import { skills } from "@/db/schema/skills";
-import { arrayContains, ilike, or, and, asc, desc } from "drizzle-orm";
+import { arrayContains, ilike, or, and, asc, desc, sql } from "drizzle-orm";
 import { MarketplaceSearchBar } from "@/components/MarketplaceSearchBar";
-import { TagPills } from "@/components/TagPills";
 import { SkillGrid } from "@/components/SkillGrid";
 
 interface PageProps {
@@ -28,7 +27,22 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       ? await db.select().from(skills).where(where).orderBy(asc(skills.riskScore))
       : sort === "risk-desc"
         ? await db.select().from(skills).where(where).orderBy(desc(skills.riskScore))
-        : await db.select().from(skills).where(where);
+        : sort === "safe"
+          ? await db.select().from(skills).where(where).orderBy(
+              sql`CASE WHEN risk_score < 30 THEN 0 ELSE 1 END`,
+              asc(skills.riskScore)
+            )
+          : sort === "warn"
+            ? await db.select().from(skills).where(where).orderBy(
+                sql`CASE WHEN risk_score >= 30 AND risk_score <= 70 THEN 0 ELSE 1 END`,
+                asc(skills.riskScore)
+              )
+            : sort === "blocked"
+              ? await db.select().from(skills).where(where).orderBy(
+                  sql`CASE WHEN risk_score > 70 THEN 0 ELSE 1 END`,
+                  asc(skills.riskScore)
+                )
+              : await db.select().from(skills).where(where);
 
   const allRows = await db
     .select({ tags: skills.tags, id: skills.id })
@@ -37,15 +51,12 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
 
   return (
     <>
-      <MarketplaceSearchBar />
+      <MarketplaceSearchBar tags={uniqueTags} />
 
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <h1 className="font-clash text-2xl text-brand-gradient mb-4 pt-4">
           Skills Marketplace
         </h1>
-        <div className="py-4">
-          <TagPills tags={uniqueTags} />
-        </div>
 
         <div className="py-6">
           {rows.length === 0 ? (

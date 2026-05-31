@@ -7,4 +7,6 @@ export const skills = pgTable("skills", {
   tags: text("tags").array().notNull().default([]),
   riskScore: integer("risk_score").notNull().default(0),
   verified: boolean("verified").notNull().default(false),
+  installCommand: text("install_command"),
+  sourceUrl: text("source_url"),
 });

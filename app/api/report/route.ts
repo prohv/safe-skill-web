@@ -37,6 +37,30 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // Validate each signal accepts both Web and CLI shapes
+  if (signals) {
+    for (const s of signals as Record<string, unknown>[]) {
+      if (!s.rule || typeof s.rule !== "string") {
+        return NextResponse.json(
+          { error: "each signal must have a rule string" },
+          { status: 400 }
+        );
+      }
+      if (
+        typeof s.severity !== "number" &&
+        !["critical", "high", "medium", "low"].includes(s.severity as string)
+      ) {
+        return NextResponse.json(
+          {
+            error:
+              "signal severity must be a number or critical/high/medium/low",
+          },
+          { status: 400 }
+        );
+      }
+    }
+  }
+
   await db.insert(reports).values({
     id,
     risk,
