@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "SafeSkill — Safe MCP Skill Scanner",
   description:
     "Discover, scan, and deploy safe MCP skills. Security intelligence layer for your AI toolkit.",
+  icons: {
+    icon: "/safeskill-logo.svg",
+  },
 };
 
 export default function RootLayout({
